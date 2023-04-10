@@ -33,10 +33,9 @@ describe('Task 1 specs', () => {
      cy.get('#currentAddress').type("house#56 street#98 jafar abad")
 
      //dropdowns
-     cy.get('#state > .css-yk16xz-control').click()
+     cy.get('#stateCity-wrapper').find('#state').find('.css-yk16xz-control').click()
      cy.get('#react-select-3-option-1').click()
-     // not to use dynamic selectors like .css-1wa3eu0
-     cy.get('#city > .css-yk16xz-control > .css-1hwfws3 > .css-1wa3eu0-placeholder').click()
+     cy.get('#stateCity-wrapper').find('#city').find('.css-1hwfws3').click()
      cy.get('#react-select-4-option-1').click()
 
     // submit
